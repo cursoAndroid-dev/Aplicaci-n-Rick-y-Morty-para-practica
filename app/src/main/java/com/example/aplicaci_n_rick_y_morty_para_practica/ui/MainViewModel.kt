@@ -50,6 +50,14 @@ class MainViewModel @Inject constructor(private val rickApiService: RickApiServi
         }
     }
 
+    fun searchCharacters(name: String) {
+        // Establece el término de búsqueda, usando 'null' si la búsqueda es vacía o en blanco para simplificar.
+        currentSearchTerm = name.takeIf { it.isNotBlank() }
+
+        // Al iniciar una búsqueda, siempre volvemos a la página 1.
+        loadPage(1)
+    }
+
     fun loadPrevPage() {
         if (currentPageNumber > 1) {
             val prevPage = currentPageNumber - 1

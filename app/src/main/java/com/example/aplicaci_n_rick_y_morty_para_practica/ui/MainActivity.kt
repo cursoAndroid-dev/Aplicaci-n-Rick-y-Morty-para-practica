@@ -2,6 +2,8 @@ package com.example.aplicaci_n_rick_y_morty_para_practica.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import androidx.appcompat.widget.SearchView
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -89,5 +91,38 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra("ID",id)
         startActivity(intent)
+    }
+
+    // 1. Inflar el Menú y configurar el SearchView
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Carga el XML del menú
+        menuInflater.inflate(R.menu.main_menu, menu)
+
+        val searchItem = menu.findItem(R.id.action_search)
+        val searchView = searchItem.actionView as SearchView
+
+        // 2. Configurar el Listener para manejar la consulta de búsqueda
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            // Se llama cuando el usuario presiona Enter/Buscar
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                val searchTerm = query?.trim()
+                if (!searchTerm.isNullOrBlank()) {
+                    // Llama al ViewModel para iniciar la búsqueda
+                    mainViewModel.searchCharacters(searchTerm)
+                } else {
+                    // Si está vacío, puede que quieras volver a mostrar todos los personajes
+                    mainViewModel.searchCharacters("")
+                }
+                searchView.clearFocus() // Ocultar el teclado tras la búsqueda
+                return true // Indicamos que hemos manejado la acción
+            }
+
+            // Se llama con cada cambio de texto (útil para sugerencias, pero aquí no la usamos)
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
+        return true
     }
 }
