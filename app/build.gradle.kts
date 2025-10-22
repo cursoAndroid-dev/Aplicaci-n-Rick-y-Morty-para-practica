@@ -55,6 +55,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:3.0.0")
     //daggerhilt
     implementation("com.google.dagger:hilt-android:2.57.1")
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
     kapt("com.google.dagger:hilt-android-compiler:2.57.1")
     //corrutinas
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
