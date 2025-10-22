@@ -17,8 +17,11 @@ import com.example.aplicaci_n_rick_y_morty_para_practica.R
 import com.example.aplicaci_n_rick_y_morty_para_practica.databinding.ActivityMainBinding
 import com.example.aplicaci_n_rick_y_morty_para_practica.ui.adapter.RickAdapter
 import com.example.aplicaci_n_rick_y_morty_para_practica.ui.detail.DetailActivity
+import com.example.aplicaci_n_rick_y_morty_para_practica.ui.favorite.FavoriteActivity
+import com.example.aplicaci_n_rick_y_morty_para_practica.util.FavoriteManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 import kotlin.getValue
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -27,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     private val mainViewModel: MainViewModel by viewModels()
 
     private lateinit var rickAdapter: RickAdapter
+    @Inject
+    lateinit var favoriteManager: FavoriteManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         // 1. Conectar acciones a los botones
         binding.bNextMain.setOnClickListener { mainViewModel.loadNextPage() }
         binding.bPrevMain.setOnClickListener { mainViewModel.loadPrevPage() }
+        binding.bFavoriteMain.setOnClickListener { pasarFavorite() }
 
         // 2. Observar el estado para habilitar/deshabilitar los botones
         lifecycleScope.launch {
@@ -68,7 +74,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun iniciarAdapter(){
-        rickAdapter = RickAdapter() {pasar(it)}
+        rickAdapter = RickAdapter(emptyList(),
+            favoriteManager,
+            {pasar(it)},
+            {favoriteManager.toggleFavorite(it)
+                rickAdapter.notifyDataSetChanged()})
 
         binding.rvMain.apply {
             adapter = rickAdapter
@@ -124,5 +134,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
         return true
+    }
+
+    private fun pasarFavorite(){
+        val intent = Intent(this, FavoriteActivity::class.java)
+        startActivity(intent)
     }
 }
