@@ -1,4 +1,4 @@
-package com.example.aplicaci_n_rick_y_morty_para_practica.ui
+package com.example.aplicaci_n_rick_y_morty_para_practica.ui.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
