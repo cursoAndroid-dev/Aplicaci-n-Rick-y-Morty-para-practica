@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="menu_icon_color">#F80101</color>
+    <color name="rick_color">#34F40A</color>
 </resources>

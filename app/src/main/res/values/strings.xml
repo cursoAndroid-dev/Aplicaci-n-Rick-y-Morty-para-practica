@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Aplicaci-n-Rick-y-Morty-para-practica</string>
+    <string name="button_prev">Prev</string>
+    <string name="button_next">Next</string>
+    <string name="button_favorite">Favorite</string>
+    <string name="title_tool_bar">Find by name</string>
+    <string name="c">c</string>
+    <string name="a">a</string>
+    <string name="r">r</string>
+    <string name="g">g</string>
+    <string name="n">n</string>
+    <string name="d">d</string>
+    <string name="o">o</string>
+    <string name="punto">.</string>
 </resources>

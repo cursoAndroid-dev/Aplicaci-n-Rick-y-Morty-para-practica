@@ -43,9 +43,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        toolBar()
         iniciarAdapter()
         observarFlow()
         iniciarNav()
+    }
+
+    private fun toolBar(){
+        supportActionBar?.title = getString(R.string.title_tool_bar)
     }
 
     private fun iniciarNav() {
@@ -123,6 +128,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     // Si está vacío, puede que quieras volver a mostrar todos los personajes
                     mainViewModel.searchCharacters("")
+
                 }
                 searchView.clearFocus() // Ocultar el teclado tras la búsqueda
                 return true // Indicamos que hemos manejado la acción

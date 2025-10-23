@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rick_morty"
+    tools:context=".ui.splash.SplashActivity">
+
+    <TextView
+        android:id="@+id/tv_c_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/c"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_a_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/a"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_c_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_r_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/r"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_a_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_g_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/g"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_r_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_a2_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/a"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_g_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_n_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/n"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_a2_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_d_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/d"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_n_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_o_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/o"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_d_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_punto1_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/punto"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_o_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_punto2_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/punto"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_punto1_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_punto3_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/punto"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_punto2_splash"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

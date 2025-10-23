@@ -13,6 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/favorite_preview_item"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

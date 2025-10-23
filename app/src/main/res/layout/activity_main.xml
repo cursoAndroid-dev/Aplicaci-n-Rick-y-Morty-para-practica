@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/fondo_main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="Next"
+        android:text="@string/button_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Prev"
+        android:text="@string/button_prev"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +43,7 @@
         android:id="@+id/b_favorite_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Favorite"
+        android:text="@string/button_favorite"
         app:layout_constraintBottom_toTopOf="@+id/rv_main"
         app:layout_constraintEnd_toStartOf="@+id/b_next_main"
         app:layout_constraintStart_toEndOf="@+id/b_prev_main"
