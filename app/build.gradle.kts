@@ -51,8 +51,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     //retrofit
-    implementation("com.squareup.retrofit2:retrofit:3.0.0")
-    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     //daggerhilt
     implementation("com.google.dagger:hilt-android:2.57.1")
     implementation(libs.androidx.recyclerview)
@@ -63,6 +63,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4")
     //picasso
     implementation("com.squareup.picasso:picasso:2.71828")
+    //room
+    implementation("androidx.room:room-runtime:2.7.0-alpha02")
+    kapt("androidx.room:room-compiler:2.7.0-alpha02")
+    implementation("androidx.room:room-ktx:2.7.0-alpha02")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

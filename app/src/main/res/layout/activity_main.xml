@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="2dp"
         android:text="@string/button_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:id="@+id/b_prev_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
         android:text="@string/button_prev"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,9 +43,19 @@
         android:id="@+id/b_favorite_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
         android:text="@string/button_favorite"
-        app:layout_constraintBottom_toTopOf="@+id/rv_main"
         app:layout_constraintEnd_toStartOf="@+id/b_next_main"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/button_record"
         app:layout_constraintStart_toEndOf="@+id/b_prev_main"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

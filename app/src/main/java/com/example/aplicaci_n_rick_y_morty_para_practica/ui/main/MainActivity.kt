@@ -18,6 +18,7 @@ import com.example.aplicaci_n_rick_y_morty_para_practica.databinding.ActivityMai
 import com.example.aplicaci_n_rick_y_morty_para_practica.ui.adapter.RickAdapter
 import com.example.aplicaci_n_rick_y_morty_para_practica.ui.detail.DetailActivity
 import com.example.aplicaci_n_rick_y_morty_para_practica.ui.favorite.FavoriteActivity
+import com.example.aplicaci_n_rick_y_morty_para_practica.ui.log.LogActivity
 import com.example.aplicaci_n_rick_y_morty_para_practica.util.FavoriteManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         iniciarAdapter()
         observarFlow()
         iniciarNav()
+        setupListeners()
     }
 
     private fun toolBar(){
@@ -144,6 +146,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun pasarFavorite(){
         val intent = Intent(this, FavoriteActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun setupListeners() {
+        // Usar el ID del botón que has definido: b_record
+        binding.bRecord.setOnClickListener {
+            navigateToLogActivity()
+        }
+    }
+
+    private fun navigateToLogActivity() {
+        val intent = Intent(this, LogActivity::class.java)
         startActivity(intent)
     }
 }
